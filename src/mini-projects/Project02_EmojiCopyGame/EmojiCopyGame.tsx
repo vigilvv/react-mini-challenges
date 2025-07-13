@@ -25,14 +25,14 @@ export default function EmojiCopyGame() {
     const copiedEmoji = target.innerText;
     const copiedTimestamp = e.timeStamp;
 
-    console.log(copiedTimestamp);
-
     if (copiedEmoji === selectedEmoji.emoji && copiedTimestamp <= 10000) {
       alert("Winner!");
     } else {
       alert("You lose! Try again by pressing the RESET button.");
     }
   };
+
+  const handleReset = () => window.location.reload();
 
   return (
     <div className={styles.gameBox}>
@@ -45,10 +45,7 @@ export default function EmojiCopyGame() {
           </li>
         ))}
       </ul>
-      <a
-        onClick={() => window.location.reload()}
-        className={styles.resetButton}
-      >
+      <a onClick={handleReset} className={styles.resetButton}>
         RESET GAME
       </a>
     </div>
