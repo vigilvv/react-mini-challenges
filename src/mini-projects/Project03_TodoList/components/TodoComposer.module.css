@@ -1,0 +1,5 @@
+.newTodoItem {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}

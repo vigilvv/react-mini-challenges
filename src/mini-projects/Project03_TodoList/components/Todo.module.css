@@ -1,0 +1,15 @@
+.todoLabelStrikethrough {
+    text-decoration:line-through
+}
+
+.todo {
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todoLabel {
+    overflow: auto;
+    word-break: keep-all;
+    line-break: nowrap;
+}

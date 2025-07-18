@@ -1,5 +1,6 @@
 import AlertButton from "./mini-projects/Project01_AlertButton";
 import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame/EmojiCopyGame";
+import TodoList from "./mini-projects/Project03_TodoList/TodoList";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
         "RESET" and try again.
       </p>
       <EmojiCopyGame />
+
+      <h3>3. Todo App</h3>
+      <p>Create a Todo App</p>
+      <TodoList />
     </>
   );
 }
