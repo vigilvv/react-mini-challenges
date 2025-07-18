@@ -1,6 +1,6 @@
 import AlertButton from "./mini-projects/Project01_AlertButton";
-import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame/EmojiCopyGame";
-import TodoList from "./mini-projects/Project03_TodoList/TodoList";
+import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame";
+import TodoList from "./mini-projects/Project03_TodoList";
 
 function App() {
   return (

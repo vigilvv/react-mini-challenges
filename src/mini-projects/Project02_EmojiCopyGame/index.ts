@@ -1,1 +1,1 @@
-export { default } from "./EmojiCopyGame.module.css";
+export { default } from "./EmojiCopyGame.tsx";
