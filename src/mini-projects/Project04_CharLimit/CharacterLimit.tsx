@@ -10,7 +10,9 @@ export default function CharacterLimit() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setInput(e.target.value);
 
-  const handleSubmitClick = () => {
+  const handleSubmitClick = (e: React.FormEvent) => {
+    e.preventDefault();
+
     if (limitExceeded) {
       alert("Cannot submit: Limit exceeded");
     } else {

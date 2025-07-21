@@ -2,6 +2,7 @@ import AlertButton from "./mini-projects/Project01_AlertButton";
 import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame";
 import TodoList from "./mini-projects/Project03_TodoList";
 import CharacterLimit from "./mini-projects/Project04_CharLimit";
+import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
 
 function App() {
   return (
@@ -31,6 +32,14 @@ function App() {
         submitting.
       </p>
       <CharacterLimit />
+
+      <h3>5. Password toggle</h3>
+      <p>
+        Visually show if the password is below the minimum character limit (8).
+        If it is below the limit show a visual indication and a "submission
+        failed" alert when submitting.
+      </p>
+      <PasswordToggle />
     </>
   );
 }
