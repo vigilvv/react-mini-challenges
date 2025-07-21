@@ -1,0 +1,8 @@
+.labelDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.charLimitExceed {
+    color: red;
+}

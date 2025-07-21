@@ -1,6 +1,7 @@
 import AlertButton from "./mini-projects/Project01_AlertButton";
 import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame";
 import TodoList from "./mini-projects/Project03_TodoList";
+import CharacterLimit from "./mini-projects/Project04_CharLimit";
 
 function App() {
   return (
@@ -22,6 +23,14 @@ function App() {
       <h3>3. Todo App</h3>
       <p>Create a Todo App</p>
       <TodoList />
+
+      <h3>4. Character Limit Alerter</h3>
+      <p>
+        Visually show if the input text exceeds the set character limit (20). If
+        it exceeds show a visual indication and a "submission failed" alert when
+        submitting.
+      </p>
+      <CharacterLimit />
     </>
   );
 }
