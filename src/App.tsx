@@ -3,6 +3,7 @@ import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame";
 import TodoList from "./mini-projects/Project03_TodoList";
 import CharacterLimit from "./mini-projects/Project04_CharLimit";
 import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
+import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
 
 function App() {
   return (
@@ -40,6 +41,15 @@ function App() {
         failed" alert when submitting.
       </p>
       <PasswordToggle />
+
+      <h3>6. Multi-Language Greeting</h3>
+      <p>
+        Create an app that displays greetings to a user in 3 different
+        languages. The user can cycle through the greetings by clicking on a
+        button. Store this selection in localStorage so that when the user
+        returns to the app later they will see their last selected greeting.
+      </p>
+      <MultiLanguageGreeting />
     </>
   );
 }
