@@ -4,6 +4,7 @@ import TodoList from "./mini-projects/Project03_TodoList";
 import CharacterLimit from "./mini-projects/Project04_CharLimit";
 import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
 import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
+import SearchFilter from "./mini-projects/Project07_SearchFilter";
 
 function App() {
   return (
@@ -50,6 +51,10 @@ function App() {
         returns to the app later they will see their last selected greeting.
       </p>
       <MultiLanguageGreeting />
+
+      <h3>7. Search Filter</h3>
+      <p>Display only the items matching the search input.</p>
+      <SearchFilter />
     </>
   );
 }

@@ -15,7 +15,7 @@ export default function MultiLanguageGreeting() {
     const retrievedIndex = localStorage.getItem("index");
 
     if (retrievedIndex === null) return;
-    console.log("Running useEffect", new Date().getTime());
+    // console.log("Running useEffect", new Date().getTime());
     setIndex(Number(retrievedIndex));
   }, []);
 
