@@ -5,6 +5,8 @@ import CharacterLimit from "./mini-projects/Project04_CharLimit";
 import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
 import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
 import SearchFilter from "./mini-projects/Project07_SearchFilter";
+// import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
+import PokemonCarouselWithAbort from "./mini-projects/Project08_PokemonCarousel/PokemonCarouselwithAbort";
 
 function App() {
   return (
@@ -55,6 +57,11 @@ function App() {
       <h3>7. Search Filter</h3>
       <p>Display only the items matching the search input.</p>
       <SearchFilter />
+
+      <h3>8. Pokemon Carousel</h3>
+      <p>Fetch and display pokemon from PokeAPI</p>
+      {/* <PokemonCarousel /> */}
+      <PokemonCarouselWithAbort />
     </>
   );
 }
