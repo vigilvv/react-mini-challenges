@@ -6,7 +6,8 @@ import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
 import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
 import SearchFilter from "./mini-projects/Project07_SearchFilter";
 // import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
-import PokemonCarouselWithAbort from "./mini-projects/Project08_PokemonCarousel/PokemonCarouselwithAbort";
+import { PokemonCarouselWithAbort } from "./mini-projects/Project08_PokemonCarousel";
+import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
 
 function App() {
   return (
@@ -62,6 +63,14 @@ function App() {
       <p>Fetch and display pokemon from PokeAPI</p>
       {/* <PokemonCarousel /> */}
       <PokemonCarouselWithAbort />
+
+      <h3>9. Tab Visibility Counter</h3>
+      <p>
+        Displays a count for the number of times the user has switched away from
+        the current browser tab.
+      </p>
+      {/* <PokemonCarousel /> */}
+      <TabVisibilityCounter />
     </>
   );
 }
