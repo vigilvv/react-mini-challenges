@@ -1,0 +1,66 @@
+.container {
+    position: relative;
+}
+
+/* SECTION STYLES */
+
+.section {
+    display: grid;
+    align-content: center;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    font-size: 2rem;
+
+    width: 100%;
+    height: 600px;
+}
+
+.section1 {
+    composes: section;
+    background-color: bisque;
+}
+
+
+.section2 {
+    composes: section;
+    background-color: aquamarine;
+}
+
+.section3 {
+    composes: section;
+    background-color: coral;
+}
+
+/* NAVIGATION STYLES */
+
+nav {
+    position: sticky;
+    top: 40px;
+    margin-left: auto;
+    border: 1px solid black;
+    display: flex;
+    width: fit-content
+}
+
+.navChild {
+    text-align: center;
+    color: black;
+    width: 60px;
+    cursor: pointer;
+}
+
+.navChild1 {
+    composes: navChild;
+    background-color: bisque;
+}
+
+.navChild2 {
+    composes: navChild;
+    background-color: aquamarine;
+}
+
+.navChild3 {
+    composes: navChild;
+    background-color: coral;
+}
