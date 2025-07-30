@@ -8,6 +8,7 @@ import SearchFilter from "./mini-projects/Project07_SearchFilter";
 // import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
 import { PokemonCarouselWithAbort } from "./mini-projects/Project08_PokemonCarousel";
 import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
+import StopWatch from "./mini-projects/Project10_StopWatch";
 
 function App() {
   return (
@@ -71,6 +72,14 @@ function App() {
       </p>
       {/* <PokemonCarousel /> */}
       <TabVisibilityCounter />
+
+      <h3>10. StopWatch</h3>
+      <p>
+        Create a StopWatch component that allows the user to start and stop the
+        timer.
+      </p>
+      {/* <PokemonCarousel /> */}
+      <StopWatch />
     </>
   );
 }
