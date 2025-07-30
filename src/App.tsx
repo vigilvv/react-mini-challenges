@@ -1,19 +1,22 @@
-import AlertButton from "./mini-projects/Project01_AlertButton";
-import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame";
-import TodoList from "./mini-projects/Project03_TodoList";
-import CharacterLimit from "./mini-projects/Project04_CharLimit";
-import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
-import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
-import SearchFilter from "./mini-projects/Project07_SearchFilter";
-// import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
-import { PokemonCarouselWithAbort } from "./mini-projects/Project08_PokemonCarousel";
-import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
-import StopWatch from "./mini-projects/Project10_StopWatch";
+// import AlertButton from "./mini-projects/Project01_AlertButton";
+// import EmojiCopyGame from "./mini-projects/Project02_EmojiCopyGame";
+// import TodoList from "./mini-projects/Project03_TodoList";
+// import CharacterLimit from "./mini-projects/Project04_CharLimit";
+// import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
+// import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
+// import SearchFilter from "./mini-projects/Project07_SearchFilter";
+// // import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
+// import PokemonCarousel, {
+//   PokemonCarouselWithAbort,
+// } from "./mini-projects/Project08_PokemonCarousel";
+// import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
+// import StopWatch from "./mini-projects/Project10_StopWatch";
+import CSSRollAnimation from "./mini-projects/Project11_CSSRollAnimation";
 
 function App() {
   return (
     <>
-      <h1>React Mini Projects</h1>
+      {/* <h1>React Mini Projects</h1>
       <h3>1. Alert Button</h3>
       <p>When clicked creates a button event and displays the alert</p>
       <AlertButton />
@@ -61,8 +64,10 @@ function App() {
       <SearchFilter />
 
       <h3>8. Pokemon Carousel</h3>
-      <p>Fetch and display pokemon from PokeAPI</p>
-      {/* <PokemonCarousel /> */}
+      <p>
+        Fetch and display pokemon from PokeAPI (can also use "PokemonCarousel"
+        component)
+      </p>
       <PokemonCarouselWithAbort />
 
       <h3>9. Tab Visibility Counter</h3>
@@ -70,7 +75,6 @@ function App() {
         Displays a count for the number of times the user has switched away from
         the current browser tab.
       </p>
-      {/* <PokemonCarousel /> */}
       <TabVisibilityCounter />
 
       <h3>10. StopWatch</h3>
@@ -78,8 +82,14 @@ function App() {
         Create a StopWatch component that allows the user to start and stop the
         timer.
       </p>
-      {/* <PokemonCarousel /> */}
-      <StopWatch />
+      <StopWatch /> */}
+
+      <h3>11. CSS Roll Animation</h3>
+      <p>
+        On button click transform the shape into a ball and roll (left-right and
+        right-left).
+      </p>
+      <CSSRollAnimation />
     </>
   );
 }

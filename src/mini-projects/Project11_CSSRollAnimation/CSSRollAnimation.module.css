@@ -1,0 +1,77 @@
+
+.shapeContainer {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+.shape {
+    width: 100px;
+    height: 100px;
+    background-color: #d41c8d;
+    position: absolute;
+    /* top: 100px; */
+    left: 0;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.animateRight {
+    animation: rollRight 2s forwards;
+}
+
+.animateLeft {
+    animation: rollLeft 2s forwards;
+}
+
+@keyframes rollRight {
+    0% {
+        left: 0;
+        border-radius: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50%;
+    }
+
+    75% {
+        border-radius: 50%;
+    }
+
+    100% {
+        left: calc(100% - 100px);
+        border-radius: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rollLeft {
+    0% {
+        left: calc(100% - 100px);
+        border-radius: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50%;
+    }
+
+    75% {
+        border-radius: 50%;
+    }
+
+    100% {
+        left: 0;
+        border-radius: 0;
+        transform: rotate(-360deg);
+    }
+}
+
+/* 
+- The square turns into a circle mid-animation (25%–75%). 
+- The rotate(360deg) and rotate(-360deg) simulates "rolling."
+*/
