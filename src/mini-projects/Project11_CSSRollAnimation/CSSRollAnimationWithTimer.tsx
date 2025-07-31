@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./CSSRollAnimation.module.css";
 
-export default function CSSRollAnimation() {
+export default function CSSRollAnimationWithTimer() {
   const [position, setPosition] = useState<"left" | "right">("left"); // Postion of the square shape
   const [animationState, setAnimationState] = useState<
     "" | "animateLeft" | "animateRight"

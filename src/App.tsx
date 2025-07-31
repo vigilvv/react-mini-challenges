@@ -11,8 +11,11 @@
 // } from "./mini-projects/Project08_PokemonCarousel";
 // import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
 // import StopWatch from "./mini-projects/Project10_StopWatch";
-import CSSRollAnimation from "./mini-projects/Project11_CSSRollAnimation";
-import ToolbarScroll from "./mini-projects/Project12_ToolbarScroll";
+// import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
+
+import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
+
+// import ToolbarScroll from "./mini-projects/Project12_ToolbarScroll";
 
 function App() {
   return (
@@ -85,18 +88,18 @@ function App() {
       </p>
       <StopWatch /> */}
 
-      {/* <h3>11. CSS Roll Animation</h3>
+      <h3>11. CSS Roll Animation</h3>
       <p>
         On button click transform the shape into a ball and roll (left-right and
-        right-left).
+        right-left). There is also "CSSRollAnimationWithTimer".
       </p>
-      <CSSRollAnimation /> */}
+      <CSSRollAnimationWithRef />
 
-      <h3>12. ToolbarScroll</h3>
+      {/* <h3>12. ToolbarScroll</h3>
       <p>
         Toolbar that you can click and scroll to different sections of the page
       </p>
-      <ToolbarScroll />
+      <ToolbarScroll /> */}
     </>
   );
 }
