@@ -1,0 +1,11 @@
+.count {
+    font-size: 2rem;
+    color:burlywood
+}
+
+.sliderGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+}

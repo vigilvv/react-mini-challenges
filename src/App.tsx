@@ -13,7 +13,9 @@
 // import StopWatch from "./mini-projects/Project10_StopWatch";
 // import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
 
-import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
+import SliderCounter from "./mini-projects/Project13_SliderCounter";
+
+// import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
 // import ToolbarScroll from "./mini-projects/Project12_ToolbarScroll";
 
@@ -88,18 +90,25 @@ function App() {
       </p>
       <StopWatch /> */}
 
-      <h3>11. CSS Roll Animation</h3>
+      {/* <h3>11. CSS Roll Animation</h3>
       <p>
         On button click transform the shape into a ball and roll (left-right and
         right-left). There is also "CSSRollAnimationWithTimer".
       </p>
-      <CSSRollAnimationWithRef />
+      <CSSRollAnimationWithRef /> */}
 
       {/* <h3>12. ToolbarScroll</h3>
       <p>
         Toolbar that you can click and scroll to different sections of the page
       </p>
       <ToolbarScroll /> */}
+
+      <h3>13. CounterSlider</h3>
+      <p>
+        Use slider to adjust count step between 1 to 10. Incremnent, decrement,
+        or reset counter on button presses.
+      </p>
+      <SliderCounter />
     </>
   );
 }
