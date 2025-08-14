@@ -6,37 +6,80 @@ type ReducerStateType = {
   step: number;
 };
 
-type ReducerActionType = {
-  type: "increment" | "decrement" | "reset" | "updateStep";
-  step?: number;
-};
+// type ReducerActionType = {
+//   type: "increment" | "decrement" | "reset" | "updateStep";
+//   step?: number;
+// };
+
+// Using discriminated union
+type ReducerActionType =
+  | {
+      type: "increment" | "decrement" | "reset";
+    }
+  | {
+      type: "updateStep";
+      step: number;
+    };
 
 export default function SliderCounter() {
-  const [sliderValue, setSliderValue] = useState(1);
+  const [sliderValue, setSliderValue] = useState(1); // Can also use a ref for this
 
+  // Reducer using else if
+  // function reducer(state: ReducerStateType, action: ReducerActionType) {
+  //   if (action.type === "increment") {
+  //     return {
+  //       count: state.count + state.step,
+  //       step: state.step,
+  //     };
+  //   } else if (action.type === "decrement") {
+  //     return {
+  //       count: state.count - state.step,
+  //       step: state.step,
+  //     };
+  //   } else if (action.type === "reset") {
+  //     return {
+  //       count: 0,
+  //       step: state.step,
+  //     };
+  //   } else if (action.type === "updateStep") {
+  //     return {
+  //       count: state.count,
+  //       // step: action.step ?? 1, // You need this to avoid TS warning. ReducerActionType for "step" can be undefined if not specified.
+  //       step: action.step,
+  //     };
+  //   } else {
+  //     throw new Error("Unsupported action type specified");
+  //   }
+  // }
+
+  // Reducer using switch/case
   function reducer(state: ReducerStateType, action: ReducerActionType) {
-    if (action.type === "increment") {
-      return {
-        count: state.count + state.step,
-        step: state.step,
-      };
-    } else if (action.type === "decrement") {
-      return {
-        count: state.count - state.step,
-        step: state.step,
-      };
-    } else if (action.type === "reset") {
-      return {
-        count: 0,
-        step: state.step,
-      };
-    } else if (action.type === "updateStep") {
-      return {
-        count: state.count,
-        step: action.step ?? 1, // You need this to avoid TS warning. ReducerActionType for "step" can be undefined if not specified.
-      };
-    } else {
-      throw new Error("Unsupported action type specified");
+    const step = action.type === "updateStep" ? action.step : state.step;
+    const count = state.count;
+
+    switch (action.type) {
+      case "increment":
+        return {
+          count: count + step,
+          step,
+        };
+      case "decrement":
+        return {
+          count: count - step,
+          step,
+        };
+      case "reset":
+        return {
+          count: 0,
+          step,
+        };
+      case "updateStep":
+        return {
+          count: count,
+          step,
+        };
+      default:
+        throw new Error("Unsupported action type specified");
     }
   }
 

@@ -13,7 +13,8 @@
 // import StopWatch from "./mini-projects/Project10_StopWatch";
 // import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
 
-import SliderCounter from "./mini-projects/Project13_SliderCounter";
+// import SliderCounter from "./mini-projects/Project13_SliderCounter";
+import SimpleFormWithState from "./mini-projects/Project14_SimpleForm";
 
 // import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
@@ -102,13 +103,20 @@ function App() {
         Toolbar that you can click and scroll to different sections of the page
       </p>
       <ToolbarScroll /> */}
-
+      {/* 
       <h3>13. CounterSlider</h3>
       <p>
         Use slider to adjust count step between 1 to 10. Incremnent, decrement,
         or reset counter on button presses.
       </p>
-      <SliderCounter />
+      <SliderCounter /> */}
+
+      <h3>14. SimpleForm</h3>
+      <p>
+        Simple form that takes name, email and TOS - in two forms
+        "SimpleFormWithState" and "SimpleFormWithReducer"
+      </p>
+      <SimpleFormWithState />
     </>
   );
 }
