@@ -38,7 +38,7 @@ export function SimpleFormWithState() {
 
   return (
     <div>
-      <h4>SimpleForm</h4>
+      <h4>SimpleForm - with State</h4>
       <form onSubmit={handleSubmit} className={styles.formStyle}>
         <label htmlFor="name">
           <span>Name</span>

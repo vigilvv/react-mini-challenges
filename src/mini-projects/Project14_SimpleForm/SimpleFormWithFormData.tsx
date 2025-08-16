@@ -29,7 +29,7 @@ export default function SimpleFormWithFormData() {
 
   return (
     <div>
-      <h4>SimpleForm</h4>
+      <h4>SimpleForm - with FormData</h4>
       <form onSubmit={handleSubmit} ref={formRef} className={styles.formStyle}>
         <label htmlFor="name">
           <span>Name</span>
