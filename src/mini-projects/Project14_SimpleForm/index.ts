@@ -1,1 +1,2 @@
-export { default } from "./SimpleFormWithState";
+export { default } from "./SimpleFormWithFormData";
+export { SimpleFormWithState } from "./SimpleFormWithState";

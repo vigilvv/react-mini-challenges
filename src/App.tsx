@@ -14,7 +14,7 @@
 // import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
 
 // import SliderCounter from "./mini-projects/Project13_SliderCounter";
-import SimpleFormWithState from "./mini-projects/Project14_SimpleForm";
+import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
 
 // import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
@@ -113,8 +113,9 @@ function App() {
 
       <h3>14. SimpleForm</h3>
       <p>
-        Simple form that takes name, email and TOS - in two forms
-        "SimpleFormWithState" and "SimpleFormWithReducer"
+        Simple form that takes name, email and TOS - in three forms
+        "SimpleFormWithFormData", "SimpleFormWithState" and
+        "SimpleFormWithReducer"
       </p>
       <SimpleFormWithState />
     </>

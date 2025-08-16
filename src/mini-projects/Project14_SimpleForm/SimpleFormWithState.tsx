@@ -1,36 +1,45 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { mockSubmit } from "./mockSubmit";
 import styles from "./SimpleForm.module.css";
 
-export default function SimpleFormWithState() {
-  const formRef = useRef<HTMLFormElement>(null);
+export function SimpleFormWithState() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [agreeTOS, setAgreeTOS] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    setSubmitting(true);
+    setError(null);
+    setSuccess(false);
 
-    // If the handler is on the same element that the user is interacting with, target and currentTarget are usually the same — and target is fine.
-    // But if you're handling events bubbling from children (like a parent <div> catching child clicks), prefer currentTarget.
-
-    const { name, email, agreeTOS } = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      agreeTOS: (formData.get("tos") === "on") as boolean,
-    };
-
-    // alert(`Name: ${name}. Email: ${email}. Agree TOS: ${agreeTOS}`);
-
-    await mockSubmit({ name, email, agreeTOS });
-
-    if (formRef.current) {
-      formRef.current.reset();
+    try {
+      await mockSubmit({ name, email, agreeTOS });
+      setSuccess(true);
+      setName("");
+      setEmail("");
+      setAgreeTOS(true);
+    } catch (e) {
+      const err = e as Error;
+      setSuccess(false);
+      setError(err.message);
+    } finally {
+      setSubmitting(false);
     }
   };
+
+  // Console log just to avoid TS warning about unused vars
+  console.log(
+    `Submitting: ${submitting}, Success: ${success}, Error: ${error}`
+  );
 
   return (
     <div>
       <h4>SimpleForm</h4>
-      <form onSubmit={handleSubmit} ref={formRef} className={styles.formStyle}>
+      <form onSubmit={handleSubmit} className={styles.formStyle}>
         <label htmlFor="name">
           <span>Name</span>
           <input
@@ -39,6 +48,8 @@ export default function SimpleFormWithState() {
             name="name"
             required
             placeholder="John Doe"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </label>
 
@@ -51,12 +62,20 @@ export default function SimpleFormWithState() {
             autoComplete="email"
             required
             placeholder="johndoe@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
 
         <label htmlFor="tos">
           <span>Agree to Terms of Service</span>
-          <input type="checkbox" id="tos" name="tos" />
+          <input
+            type="checkbox"
+            id="tos"
+            name="tos"
+            checked={agreeTOS}
+            onChange={(e) => setAgreeTOS(e.target.checked)}
+          />
         </label>
         <button type="submit">Submit</button>
       </form>
