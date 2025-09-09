@@ -5,17 +5,19 @@
 // import PasswordToggle from "./mini-projects/Project05_PasswordToggle";
 // import MultiLanguageGreeting from "./mini-projects/Project06_MultiLanguageGreeting";
 // import SearchFilter from "./mini-projects/Project07_SearchFilter";
+
+// import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
 // // import PokemonCarousel from "./mini-projects/Project08_PokemonCarousel";
-// import PokemonCarousel, {
+// import {
 //   PokemonCarouselWithAbort,
 // } from "./mini-projects/Project08_PokemonCarousel";
-// import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
+import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
 // import StopWatch from "./mini-projects/Project10_StopWatch";
 // import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
 
 // import SliderCounter from "./mini-projects/Project13_SliderCounter";
 // import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
-import { SimpleFormWithUseReducer } from "./mini-projects/Project14_SimpleForm";
+// import { SimpleFormWithUseReducer } from "./mini-projects/Project14_SimpleForm";
 
 // import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
@@ -70,13 +72,14 @@ function App() {
       <h3>7. Search Filter</h3>
       <p>Display only the items matching the search input.</p>
       <SearchFilter />
+      */}
 
-      <h3>8. Pokemon Carousel</h3>
+      {/* <h3>8. Pokemon Carousel</h3>
       <p>
         Fetch and display pokemon from PokeAPI (can also use "PokemonCarousel"
         component)
       </p>
-      <PokemonCarouselWithAbort />
+      <PokemonCarousel /> */}
 
       <h3>9. Tab Visibility Counter</h3>
       <p>
@@ -85,7 +88,7 @@ function App() {
       </p>
       <TabVisibilityCounter />
 
-      <h3>10. StopWatch</h3>
+      {/* <h3>10. StopWatch</h3>
       <p>
         Create a StopWatch component that allows the user to start and stop the
         timer.
@@ -112,13 +115,13 @@ function App() {
       </p>
       <SliderCounter /> */}
 
-      <h3>14. SimpleForm</h3>
+      {/* <h3>14. SimpleForm</h3>
       <p>
         Simple form that takes name, email and TOS - in three forms
         "SimpleFormWithFormData", "SimpleFormWithState" and
         "SimpleFormWithUseReducer"
       </p>
-      <SimpleFormWithUseReducer />
+      <SimpleFormWithUseReducer /> */}
     </>
   );
 }

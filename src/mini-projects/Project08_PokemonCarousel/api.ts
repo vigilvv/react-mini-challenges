@@ -5,9 +5,14 @@ export async function fetchPokemon(id: number) {
     const response = await fetch(`${POKEMON_BASE_URL}/${id}`);
 
     if (response.ok === true) {
+      const data = await response.json();
       return {
         error: null,
-        data: await response.json(),
+        data: {
+          id: data.id,
+          name: data.name,
+          imgUrl: data["sprites"]["other"]["official-artwork"]["front_shiny"],
+        },
       };
     }
 

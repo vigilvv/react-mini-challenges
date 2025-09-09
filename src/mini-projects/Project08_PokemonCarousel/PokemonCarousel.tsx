@@ -6,13 +6,6 @@ type Pokemon = {
   id: number;
   name: string;
   imgUrl: string;
-  // sprites: {
-  //   other: {
-  //     "official-artwork": {
-  //       front_shiny: string;
-  //     };
-  //   };
-  // };
 };
 
 export default function PokemonCarousel() {
@@ -25,53 +18,48 @@ export default function PokemonCarousel() {
 
   const handleDecrementIndex = () => setId(id > 1 ? id - 1 : id);
 
+  const handleFetchPokemon = async (id: number, ignore: boolean) => {
+    setLoading(true);
+    setError(null);
+
+    const { error, data } = await fetchPokemon(id);
+
+    if (!ignore) {
+      setError(error);
+      setPokemon(data);
+    }
+
+    setLoading(false);
+  };
+
   useEffect(() => {
-    let ignore = false;
-    const handleFetchPokemon = async () => {
-      setLoading(true);
-      setError(null);
+    let ignore = false; // For canceling useEffect if "id" changes
 
-      const { error, data } = await fetchPokemon(id);
-
-      if (!ignore) {
-        setError(error);
-        setPokemon({
-          id: data.id,
-          name: data.name,
-          imgUrl: data["sprites"]["other"]["official-artwork"]["front_shiny"],
-        });
-      }
-
-      // if (error) {
-      //   setError(error);
-      // } else {
-      //   setPokemon(data);
-      // }
-
-      setLoading(false);
-    };
-
-    handleFetchPokemon();
+    handleFetchPokemon(id, ignore);
 
     return () => {
       ignore = true;
     };
   }, [id]);
 
+  const LoadingComponent = <div>Loading...</div>;
+  const ErrorComponent = <p>{error}</p>;
+  const pokemonComponent = (
+    <div>
+      <img src={pokemon?.imgUrl} className={styles.pokemonImg} />
+      <h5>
+        {pokemon?.id}. {pokemon?.name}
+      </h5>
+    </div>
+  );
+
   return (
     <div className={styles.displayDiv}>
-      {loading ? (
-        <div>Loading...</div>
-      ) : error !== null ? (
-        <p>{error}</p>
-      ) : (
-        <div>
-          <img src={pokemon?.imgUrl} className={styles.pokemonImg} />
-          <h5>
-            {pokemon?.id}. {pokemon?.name}
-          </h5>
-        </div>
-      )}
+      {loading
+        ? LoadingComponent
+        : error !== null
+        ? ErrorComponent
+        : pokemonComponent}
       <div>
         <button onClick={handleDecrementIndex}>Prev</button>
         <button onClick={handleIncrementIndex}>Next</button>
