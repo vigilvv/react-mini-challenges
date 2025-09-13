@@ -53,34 +53,72 @@ export default function SliderCounter() {
   // }
 
   // Reducer using switch/case
+  // function reducer(state: ReducerStateType, action: ReducerActionType) {
+  //   const step = action.type === "updateStep" ? action.step : state.step;
+  //   const count = state.count;
+
+  //   switch (action.type) {
+  //     case "increment":
+  //       return {
+  //         count: count + step,
+  //         step,
+  //       };
+  //     case "decrement":
+  //       return {
+  //         count: count - step,
+  //         step,
+  //       };
+  //     case "reset":
+  //       return {
+  //         count: 0,
+  //         step,
+  //       };
+  //     case "updateStep":
+  //       return {
+  //         count: count,
+  //         step,
+  //       };
+  //     default:
+  //       throw new Error("Unsupported action type specified");
+  //   }
+  // }
+
+  // Reducer using switch/case and spread operator - for brevity
+  // function reducer(state: ReducerStateType, action: ReducerActionType) {
+  //   const step = action.type === "updateStep" ? action.step : state.step;
+  //   const count = state.count;
+
+  //   switch (action.type) {
+  //     case "increment":
+  //       return { ...state, count: count + step };
+  //     case "decrement":
+  //       return { ...state, count: count - step };
+  //     case "reset":
+  //       return { ...state, count: 0 };
+  //     case "updateStep":
+  //       return { ...state, step };
+  //     default:
+  //       throw new Error("Unsupported action type specified");
+  //   }
+  // }
+
+  // Reducer using switch/case and spread operator - for brevity - much more simplified
   function reducer(state: ReducerStateType, action: ReducerActionType) {
     const step = action.type === "updateStep" ? action.step : state.step;
     const count = state.count;
 
-    switch (action.type) {
-      case "increment":
-        return {
-          count: count + step,
-          step,
-        };
-      case "decrement":
-        return {
-          count: count - step,
-          step,
-        };
-      case "reset":
-        return {
-          count: 0,
-          step,
-        };
-      case "updateStep":
-        return {
-          count: count,
-          step,
-        };
-      default:
-        throw new Error("Unsupported action type specified");
+    const resultObject: Record<ReducerActionType["type"], ReducerStateType> = {
+      increment: { ...state, count: count + step },
+      decrement: { ...state, count: count - step },
+      reset: { ...state, count: 0 },
+      updateStep: { ...state, step },
+    };
+
+    if (!(action.type in resultObject)) {
+      throw new Error(`Unsupported action type: ${action.type}`);
     }
+
+    return resultObject[action.type];
   }
 
   const [state, dispatch] = useReducer(reducer, { count: 0, step: 1 });

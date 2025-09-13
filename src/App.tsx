@@ -11,15 +11,15 @@
 // import {
 //   PokemonCarouselWithAbort,
 // } from "./mini-projects/Project08_PokemonCarousel";
-import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
+// import TabVisibilityCounter from "./mini-projects/Project09_TabVisibilityCounter";
 // import StopWatch from "./mini-projects/Project10_StopWatch";
-// import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
 
-// import SliderCounter from "./mini-projects/Project13_SliderCounter";
+// import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
+// import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
+
+import SliderCounter from "./mini-projects/Project13_SliderCounter";
 // import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
 // import { SimpleFormWithUseReducer } from "./mini-projects/Project14_SimpleForm";
-
-// import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
 // import ToolbarScroll from "./mini-projects/Project12_ToolbarScroll";
 
@@ -81,12 +81,12 @@ function App() {
       </p>
       <PokemonCarousel /> */}
 
-      <h3>9. Tab Visibility Counter</h3>
+      {/* <h3>9. Tab Visibility Counter</h3>
       <p>
         Displays a count for the number of times the user has switched away from
         the current browser tab.
       </p>
-      <TabVisibilityCounter />
+      <TabVisibilityCounter /> */}
 
       {/* <h3>10. StopWatch</h3>
       <p>
@@ -98,7 +98,8 @@ function App() {
       {/* <h3>11. CSS Roll Animation</h3>
       <p>
         On button click transform the shape into a ball and roll (left-right and
-        right-left). There is also "CSSRollAnimationWithTimer".
+        right-left). There is "CSSRollAnimationWithTimer" and
+        "CSSRollAnimationWithRef" components.
       </p>
       <CSSRollAnimationWithRef /> */}
 
@@ -107,13 +108,13 @@ function App() {
         Toolbar that you can click and scroll to different sections of the page
       </p>
       <ToolbarScroll /> */}
-      {/* 
+
       <h3>13. CounterSlider</h3>
       <p>
         Use slider to adjust count step between 1 to 10. Incremnent, decrement,
         or reset counter on button presses.
       </p>
-      <SliderCounter /> */}
+      <SliderCounter />
 
       {/* <h3>14. SimpleForm</h3>
       <p>
