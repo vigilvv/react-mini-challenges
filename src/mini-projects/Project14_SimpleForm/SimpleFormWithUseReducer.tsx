@@ -39,36 +39,70 @@ export function SimpleFormWithUseReducer() {
           error: string | null;
         }>
   ) {
-    if (action.type === "input") {
-      return {
-        ...state,
-        [action.name ?? ""]: action.value,
-      };
-    } else if (action.type === "submit") {
-      return {
-        ...state,
-        submitting: true,
-        success: false,
-        error: null,
-      };
-    } else if (action.type === "success") {
-      return {
-        name: "",
-        email: "",
-        agreeTOS: true,
-        submitting: false,
-        success: true,
-        error: null,
-      };
-    } else if (action.type === "error") {
-      return {
-        ...state,
-        submitting: false,
-        success: false,
-        error: action.error as string,
-      };
-    } else {
-      throw new Error("Invalid action type");
+    // if (action.type === "input") {
+    //   return {
+    //     ...state,
+    //     [action.name ?? ""]: action.value,
+    //   };
+    // } else if (action.type === "submit") {
+    //   return {
+    //     ...state,
+    //     submitting: true,
+    //     success: false,
+    //     error: null,
+    //   };
+    // } else if (action.type === "success") {
+    //   return {
+    //     name: "",
+    //     email: "",
+    //     agreeTOS: true,
+    //     submitting: false,
+    //     success: true,
+    //     error: null,
+    //   };
+    // } else if (action.type === "error") {
+    //   return {
+    //     ...state,
+    //     submitting: false,
+    //     success: false,
+    //     error: action.error as string,
+    //   };
+    // } else {
+    //   throw new Error("Invalid action type");
+    // }
+
+    // Use switch instead of if/else
+    switch (action.type) {
+      case "input":
+        return {
+          ...state,
+          [action.name ?? ""]: action.value,
+        };
+      case "submit":
+        return {
+          ...state,
+          submitting: true,
+          success: false,
+          error: null,
+        };
+      case "success":
+        return {
+          name: "",
+          email: "",
+          agreeTOS: true,
+          submitting: false,
+          success: true,
+          error: null,
+        };
+      case "error":
+        return {
+          ...state,
+          submitting: false,
+          success: false,
+          error: action.error as string,
+        };
+      default:
+        throw new Error("Invalid action type");
     }
   }
 
