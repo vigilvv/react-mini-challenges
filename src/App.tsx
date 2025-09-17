@@ -17,8 +17,8 @@
 // import CSSRollAnimationWithTimer from "./mini-projects/Project11_CSSRollAnimation";
 // import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
-import SliderCounter from "./mini-projects/Project13_SliderCounter";
-// import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
+// import SliderCounter from "./mini-projects/Project13_SliderCounter";
+import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
 // import { SimpleFormWithUseReducer } from "./mini-projects/Project14_SimpleForm";
 
 // import ToolbarScroll from "./mini-projects/Project12_ToolbarScroll";
@@ -109,20 +109,20 @@ function App() {
       </p>
       <ToolbarScroll /> */}
 
-      <h3>13. CounterSlider</h3>
+      {/* <h3>13. CounterSlider</h3>
       <p>
         Use slider to adjust count step between 1 to 10. Incremnent, decrement,
         or reset counter on button presses.
       </p>
-      <SliderCounter />
+      <SliderCounter /> */}
 
-      {/* <h3>14. SimpleForm</h3>
+      <h3>14. SimpleForm</h3>
       <p>
         Simple form that takes name, email and TOS - in three forms
         "SimpleFormWithFormData", "SimpleFormWithState" and
         "SimpleFormWithUseReducer"
       </p>
-      <SimpleFormWithUseReducer /> */}
+      <SimpleFormWithState />
     </>
   );
 }

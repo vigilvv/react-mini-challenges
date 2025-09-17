@@ -24,12 +24,20 @@ export function SimpleFormWithUseReducer() {
 
   function reducer(
     state: ReducerStateType,
-    action: {
-      type: string;
-      name?: string;
-      value?: string | boolean;
-      error?: string | null;
-    }
+    // action: {
+    //   type: string;
+    //   name?: string;
+    //   value?: string | boolean;
+    //   error?: string | null;
+    // }
+    action:
+      | {
+          type: string;
+        } & Partial<{
+          name: string;
+          value: string | boolean;
+          error: string | null;
+        }>
   ) {
     if (action.type === "input") {
       return {

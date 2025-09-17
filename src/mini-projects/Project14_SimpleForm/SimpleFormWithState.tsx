@@ -22,10 +22,14 @@ export function SimpleFormWithState() {
       setName("");
       setEmail("");
       setAgreeTOS(true);
-    } catch (e) {
-      const err = e as Error;
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        setError(e.message);
+      } else {
+        throw new Error("Unsupported error type");
+      }
+      // const err = e as Error;
       setSuccess(false);
-      setError(err.message);
     } finally {
       setSubmitting(false);
     }
