@@ -18,7 +18,8 @@
 // import { CSSRollAnimationWithRef } from "./mini-projects/Project11_CSSRollAnimation";
 
 // import SliderCounter from "./mini-projects/Project13_SliderCounter";
-import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
+// import { SimpleFormWithState } from "./mini-projects/Project14_SimpleForm";
+import AutoCounterWDelayAndStep from "./mini-projects/Project15_AutoCounterWDelayAndStep";
 // import { SimpleFormWithUseReducer } from "./mini-projects/Project14_SimpleForm";
 
 // import ToolbarScroll from "./mini-projects/Project12_ToolbarScroll";
@@ -116,13 +117,21 @@ function App() {
       </p>
       <SliderCounter /> */}
 
-      <h3>14. SimpleForm</h3>
+      {/* <h3>14. SimpleForm</h3>
       <p>
         Simple form that takes name, email and TOS - in three forms
         "SimpleFormWithFormData", "SimpleFormWithState" and
         "SimpleFormWithUseReducer"
       </p>
-      <SimpleFormWithState />
+      <SimpleFormWithState /> */}
+
+      <h3>15. AutoCounterWDelayAndStep</h3>
+      <p>
+        Automatically keep incrementing the count based on the selected delay
+        from the slider. Defaut step value is 1, which can be changed with the
+        step slider.
+      </p>
+      <AutoCounterWDelayAndStep />
     </>
   );
 }
